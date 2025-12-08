@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@layer components {
+    .button-style {
+        @apply rounded-lg text-white px-2
+    }
+}
+
+body {
+    padding: 1rem;
+}
