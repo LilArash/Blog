@@ -1,19 +1,28 @@
 {
   "posts": [
     {
-      "id": "1",
-      "title": "1st post",
-      "text": "1st textaaa"
+      "id": "5369",
+      "title": "title one",
+      "text": "text one",
+      "reactions": {
+        "like": 3,
+        "dislike": 3,
+        "heart": 2,
+        "laughter": 1,
+        "cup": 2
+      }
     },
     {
-      "id": "2",
-      "title": "2nd post",
-      "text": "2nd text editedaa"
-    },
-    {
-      "id": "c4cd",
-      "title": "golo olo",
-      "text": "sssasdasfsssss"
+      "id": "92d8",
+      "title": "title two",
+      "text": "text two",
+      "reactions": {
+        "like": 0,
+        "dislike": 1,
+        "heart": 1,
+        "laughter": 2,
+        "cup": 1
+      }
     }
   ]
 }

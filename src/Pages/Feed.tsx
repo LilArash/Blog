@@ -30,7 +30,7 @@ const Feed = () => {
             <div className='rid cols-2 wg-flex flex-col md:grid md:grid-cols-2 mt-4 gap-4 mb-4'>
                 {
                     filteredPosts?.map((post: Post) => (
-                        <PostCard key={post.id} id={post.id} title={post.title} text={post.text} />
+                        <PostCard key={post.id} id={post.id} title={post.title} text={post.text} reactions={post.reactions} />
                     ))
                 }
             </div>
