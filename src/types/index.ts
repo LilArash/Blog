@@ -5,6 +5,7 @@ export type Post = {
     author?: string
     image?: string
     reactions: PostReactions
+    createdAt: string
 }
 
 export type NewPost = Omit<Post, 'id'>

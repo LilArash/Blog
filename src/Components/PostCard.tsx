@@ -1,13 +1,18 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import type { Post, PostReactions } from "../types";
+import { formatDistanceToNow } from "date-fns";
 import { useReactionMutation } from "../hooks/useReactionMutation";
 import { REACTIONS } from "../constants/reactions";
+import type { Post, PostReactions } from "../types";
 import Reactions from "./Reactions";
 
 const PostCard = (postData: Post) => {
   const naviagate = useNavigate();
   const reactionMutation = useReactionMutation();
+  const postDate = formatDistanceToNow(
+    new Date(postData.createdAt),
+    { addSuffix: true }
+  )
 
   const showDetails = () => {
     naviagate(`/posts/${postData.id}`, {
@@ -46,6 +51,7 @@ const PostCard = (postData: Post) => {
           />
         ))}
       </div>
+      <i className="text-gray-400">{postDate}</i>
     </div>
   );
 };

@@ -3,6 +3,7 @@ import { useQueryClient, useMutation } from "@tanstack/react-query";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { addNewPost, updatePost } from "../api/posts";
+import { formatISO } from "date-fns";
 import type { NewPost, Post, UpdatePost, FormFields } from "../types";
 import Nav from "../Components/Nav";
 import ValidationErrText from "../Components/ValidationErrText";
@@ -70,6 +71,7 @@ const NewPost = () => {
         laughter: 0,
         cup: 0,
       },
+      createdAt: formatISO(new Date())
     };
     if (isEditing && id) {
       editPostMutation.mutate({
