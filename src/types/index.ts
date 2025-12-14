@@ -32,3 +32,9 @@ export type ReactionProps = {
   count: number
   onClick: () => void
 }
+
+export type ReactionPayload = {
+  postId: string;
+  reaction: keyof PostReactions;
+  reactions: PostReactions;
+};

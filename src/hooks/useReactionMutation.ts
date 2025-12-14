@@ -1,24 +1,21 @@
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { updatePost } from "../api/posts";
-import type { PostReactions } from "../types";
+import {
+  useMutation,
+  useQueryClient,
+  type UseMutationResult,
+} from "@tanstack/react-query";
+import { reactionIncrement } from "../api/posts";
+import type { Post, ReactionPayload } from "../types";
 
-export const useReactionMutation() => {
-    // const queryClient = useQueryClient()
+export const useReactionMutation = (): UseMutationResult<
+  Post,
+  Error,
+  ReactionPayload
+> => {
+  const queryClient = useQueryClient();
 
-    // return useMutation(
-    //     async ({
-    //   postId,
-    //   reaction,
-    //   reactions,
-    // }: {
-    //   postId: string
-    //   reaction: keyof PostReactions
-    //   reactions: PostReactions
-    // }) => {
-    //   const updatedReactions = { ...reactions, [reaction]: reactions[reaction] + 1 }
-    //   return updatePost(postId, { reactions: updatedReactions })
-    // },
-    // )
-        
-    
-}
+  return useMutation({
+    mutationFn: ({ postId, reaction, reactions }: ReactionPayload) =>
+      reactionIncrement(postId, reaction, reactions),
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ["posts"] }),
+  });
+};
