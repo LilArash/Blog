@@ -1,11 +1,8 @@
-import React from 'react'
-import Nav from '../Components/Nav'
 
 const About = () => {
     return (
-        <div>
-            <Nav />
-            about
+        <div className="flex justify-center mt-8">
+            <span className="text-gray-900 text-3xl">About page or something idk</span>
         </div>
     )
 }

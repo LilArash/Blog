@@ -1,10 +1,9 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Nav = () => {
   return (
-    <div className='w-full flex justify-between items-center'>
-        <div className='flex gap-4 *:cursor-pointer'>
+    <div className='w-full mb-4 flex flex-col-reverse sm:flex-row justify-between items-center'>
+        <div className='flex gap-4 link-style'>
             <Link to='/'>
                 <span>Feed</span>
             </Link>
@@ -16,7 +15,7 @@ const Nav = () => {
             </Link>
         </div>
         <div>
-            <h1 className='text-3xl font-bold'>A BLOG</h1>
+            <h1 className='text-3xl font-bold text-fuchsia-400'>A BLOG</h1>
         </div>
     </div>
   )

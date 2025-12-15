@@ -1,14 +1,17 @@
 @import "tailwindcss";
 
 @layer components {
+    .link-style {
+        @apply *:cursor-pointer *:text-gray-700 *:hover:text-fuchsia-400 *:hover:underline *:transition-colors 
+    }
     .button-style {
-        @apply rounded-lg text-white px-2 cursor-pointer
+        @apply rounded-xl text-white px-2 py-1 cursor-pointer
     }
     .input-style {
         @apply border border-fuchsia-400 rounded-lg px-2 py-1 w-full transition-colors focus:outline-none focus:border-blue-500
     }
     .reaction-style {
-        @apply *:rounded-4xl *:border *:cursor-pointer *:p-1 *:border-gray-400
+        @apply *:text-gray-900 *:rounded-4xl *:border *:cursor-pointer *:p-1 *:border-gray-400 *:hover:bg-gray-400 *:transition-colors
     }
 }
 

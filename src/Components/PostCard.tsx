@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import { formatDistanceToNow } from "date-fns";
 import { useReactionMutation } from "../hooks/useReactionMutation";
@@ -34,14 +33,14 @@ const PostCard = (postData: Post) => {
     <div className="p-4 flex-col border border-fuchsia-400 rounded-md mt-4 md:mt-0">
       <div className="flex justify-between items-center">
         <div className="flex flex-col justify-center w-3/5">
-          <h2 className="font-bold text-xl">{postData.title}</h2>
-          <p className="line-clamp-2 text-wrap">{postData.text}</p>
+          <h2 className="font-bold text-xl text-gray-900">{postData.title}</h2>
+          <p className="line-clamp-2 text-wrap text-gray-700">{postData.text}</p>
         </div>
-        <button onClick={showDetails} className="button-style bg-blue-500 h-10">
-          read more
+        <button onClick={showDetails} className="button-style bg-blue-500 hover:bg-blue-800 transition-colors h-10">
+          Read More
         </button>
       </div>
-      <div className="flex flex-wrap gap-4 mt-4 reaction-style">
+      <div className="flex justify-center sm:justify-start flex-wrap gap-4 mt-4 reaction-style">
         {REACTIONS.map(({ key, icon }) => (
           <Reactions
             key={key}
