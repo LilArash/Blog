@@ -9,6 +9,7 @@ I used following packages as well:
 - React Router Dom  
 - Json Server  
 - Date fns  
+
 And Tailwindcss for design  
 
 
