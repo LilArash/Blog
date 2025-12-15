@@ -1,6 +1,6 @@
 # Simple Blog Application
 
-My firts TypeScript project. All CRuD operations all functional and wroking. There are other features too.  
+My firts TypeScript project. All CRUD operations all functional and wroking. There are other features too.  
 
 I used following packages as well:  
 - Tanstack Query  
